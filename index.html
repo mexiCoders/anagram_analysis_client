@@ -9,8 +9,9 @@
     <div class="container">
 
         <h1>Anagram Analysis</h1>
-        <p ng-bind="anagram | json"></p>
-        <p ng-show="errorMessage" ng-bind="errorMessage"></p>
+        <p ng-show="anagram.isAnagram" class="alert alert-success" role="alert"> The word {{word1}} and {{word2}} are Anagrams </p>
+        <p ng-show="anagram && !anagram.isAnagram" class="alert alert-danger" role="alert"> The word '{{word1}}' and '{{word2}}' are  NOT Anagrams </p>
+        <p ng-show="errorMessage" ng-bind="errorMessage" class="alert alert-danger" role="aler"></p>
 
         <form class="form-horizontal" ng-submit="isAnagram()">
             <div class="form-group">

@@ -10,7 +10,7 @@
                 console.log(apiUrl);
                 $http({
                     method: 'POST',
-                    url: apiUrl
+                    url: apiUrl,
                 }).success(function (data) {
                     $scope.anagram = data;
                 }).error( function () {
